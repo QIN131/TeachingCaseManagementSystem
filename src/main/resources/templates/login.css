@@ -1,0 +1,119 @@
+body{
+    background: url("beijin.jpg") no-repeat;
+    background-size:100% auto;
+}
+.container {
+    size: 300px;
+    width: 960px;
+    background: #FFF;
+    margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+}
+#login-box{
+    width:50%;
+    height:auto;
+    margin:0 auto ;
+    margin-top:5%;
+    text-align:center;
+    background:#00000060;
+    padding:50px 60px;
+}
+#login-box h1{
+    color:#fff;
+}
+#login-box .form .item{
+    margin-top:15px;
+}
+#login-box .form .item i{
+    font-size:18px;
+    color:#fff;
+}
+#login-box .form .item input{
+    width:220px;
+    font-size:18px;
+    border:0;
+    border-bottom:2px solid #fff;
+    padding:5px 10px;
+    background:#ffffff00;
+    color:#fff;
+}
+.change-button{
+
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    border:0;
+    border-radius:15px;
+    margin-top:20px ;
+    padding-right: 25px;
+    margin-left: 343px;
+
+
+}
+.change-button ul{
+    list-style: none;
+    border:0;
+    border-radius:15px;
+
+}
+.change-button ul li{
+
+    float: left;
+    width: 150px;
+    height: 50px;
+
+    margin-right: 1px;
+    font-size:21px;
+    font-weight:800;
+    border:0;
+    border-radius:15px;
+}
+
+.change-button ul li:hover{
+
+    color:#fff;
+    border:0;
+    border-radius:15px;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+
+}
+.change-button ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:0;
+    border-radius:15px;
+
+}
+.change-button ul li ul li{
+    display: none;
+    width: 150px;
+    height: 50px;
+    float: initial;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    font-size:21px;
+    font-weight:800;
+    border:0;
+    border-radius:15px;
+}
+.change-button ul li:hover ul li{
+    display: block;
+    border-top:1px solid rgba(72,219,251,0.5);
+    border:0;
+    border-radius:15px;
+}
+
+#login-box 	button{
+    margin-top:30px;
+    width:200px;
+    height:35px;
+    font-size:21px;
+    font-weight:800;
+    color:#fff;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    border:0;
+    border-radius:15px;
+}
