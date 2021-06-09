@@ -8,6 +8,10 @@ package teachercasemanagementsystem.umlgroup.controller;
 import java.sql.*;
 
 public class RegisterController {
+    String DB_URL = null;
+    String USER = null;
+    String PASS = null;
+
     private String Id;
     private String password;
 
@@ -30,7 +34,7 @@ public class RegisterController {
         ResultSet rs;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("DB_URL","USER","PASS");//缺失--数据库连接url,角色
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);//缺失--数据库连接url,角色
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,getId());
             rs = pstmt.executeQuery();
@@ -53,7 +57,7 @@ public class RegisterController {
         ResultSet rs;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("DB_URL","USER","PASS");//缺失--数据库连接url,角色
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);//缺失--数据库连接url,角色
 
             //参数设置
             pstmt = conn.prepareStatement(sql);

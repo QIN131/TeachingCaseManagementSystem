@@ -12,6 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class LoginController {
+    String DB_URL = null;
+    String USER = null;
+    String PASS = null;
     public boolean verifyLoginInfo(String teacherId) {
         Connection conn;
         PreparedStatement pstmt;
@@ -19,12 +22,34 @@ public class LoginController {
         ResultSet rs;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("DB_URL","USER","PASS");//缺失--数据库连接url,角色
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);//缺失--数据库连接url,角色
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1,teacherId);
             rs = pstmt.executeQuery();
 
             if (rs.next()) {
+                return true;
+            }
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean addLoginInfo(String teacherAccount_name,String teacherAccount_pwd,String teacherAccount_id) {
+        Connection conn;
+        PreparedStatement pstmt;
+        String sql = "insert into teacheraccount values (?,?,?)";
+
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);//缺失--数据库连接url,角色
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,teacherAccount_name);
+            pstmt.setString(2,teacherAccount_pwd);
+            pstmt.setString(3,teacherAccount_id);
+            if (pstmt.executeUpdate() == 1) {
                 return true;
             }
 

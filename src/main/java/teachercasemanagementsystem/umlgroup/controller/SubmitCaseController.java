@@ -8,6 +8,10 @@ package teachercasemanagementsystem.umlgroup.controller;
 import java.sql.*;
 
 public class SubmitCaseController {
+    String DB_URL = null;
+    String USER = null;
+    String PASS = null;
+
     private String caseType;
     private String caseContent;
     private int caseCondition;
@@ -24,7 +28,7 @@ public class SubmitCaseController {
 
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("DB_URL","USER","PASS");//缺失--数据库连接url,角色
+            conn = DriverManager.getConnection(DB_URL,USER,PASS);//缺失--数据库连接url,角色
 
             //参数设置
             pstmt = conn.prepareStatement(sql);
