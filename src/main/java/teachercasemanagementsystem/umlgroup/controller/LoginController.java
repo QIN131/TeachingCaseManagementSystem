@@ -12,9 +12,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class LoginController {
-    String DB_URL = null;
-    String USER = null;
-    String PASS = null;
+    private String DB_URL = null;
+    private String USER = null;
+    private String PASS = null;
+
     public boolean verifyLoginInfo(String teacherId) {
         Connection conn;
         PreparedStatement pstmt;

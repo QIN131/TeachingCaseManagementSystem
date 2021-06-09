@@ -8,9 +8,9 @@ package teachercasemanagementsystem.umlgroup.controller;
 import java.sql.*;
 
 public class RegisterController {
-    String DB_URL = null;
-    String USER = null;
-    String PASS = null;
+    private String DB_URL = null;
+    private String USER = null;
+    private String PASS = null;
 
     private String Id;
     private String password;
